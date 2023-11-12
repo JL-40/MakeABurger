@@ -4,9 +4,10 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+// Audio Manager Script given by Shaped by Rain Studios. Link to Youtube video: https://www.youtube.com/watch?v=rcBHIOjZDpk
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance { get; private set; }
+    public static AudioManager Instance { get; private set; }
 
     [Header("Volume")]
 
@@ -34,12 +35,12 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Debug.LogError("More than one Audio Manager in the Scene");
         }
 
-        instance = this;
+        Instance = this;
 
         eventInstances = new List<EventInstance>();
 
@@ -51,8 +52,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //InitializeAmbience(FModEvents.instance.ambience);
-        InitializeMusic(FModEvents.instance.music);
+        //InitializeAmbience(FModEvents.Instance.ambience);
+        InitializeMusic(FModEvents.Instance.music);
     }
 
     private void Update()
@@ -128,5 +129,40 @@ public class AudioManager : MonoBehaviour
     private void OnDestroy()
     {
         CleanUp();
+    }
+
+    public void PauseAllAudio()
+    {
+        PLAYBACK_STATE playbackState;
+
+        foreach (EventInstance eventInstance in eventInstances)
+        {
+            if (eventInstance.Equals(musicEventInstance))
+            {
+                continue;
+            }
+
+            eventInstance.getPlaybackState(out playbackState);
+
+            if (playbackState.Equals(PLAYBACK_STATE.PLAYING))
+            {
+                eventInstance.setPaused(true);
+            }
+        }
+    }
+
+    public void ResumeAllAudio()
+    {
+        bool isAudioPaused;
+
+        foreach (EventInstance eventInstance in eventInstances)
+        {
+            eventInstance.getPaused(out isAudioPaused);
+
+           if (isAudioPaused == true)
+            {
+                eventInstance.setPaused(false);
+            }
+        }
     }
 }

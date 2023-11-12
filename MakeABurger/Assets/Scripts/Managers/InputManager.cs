@@ -5,20 +5,20 @@ using UnityEngine;
 // Credits to samyam's Youtube video: Cinemachine First Person Controller w/ Input System - Unity Tutorial - https://www.youtube.com/watch?v=5n_hmqHdijM
 public class InputManager : MonoBehaviour
 {
-    static InputManager _instance;
-    public static InputManager Instance { get { return _instance; } }
+    static InputManager _Instance;
+    public static InputManager Instance { get { return _Instance; } }
 
     PlayerInputActions playerInputActions;
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (_Instance != null && _Instance != this)
         {
             Destroy(gameObject);
         }
         else
         {
-            _instance = this;
+            _Instance = this;
         }
 
         playerInputActions = new PlayerInputActions();

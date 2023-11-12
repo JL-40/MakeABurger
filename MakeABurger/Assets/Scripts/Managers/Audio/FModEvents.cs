@@ -3,36 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
+// FModEvents Script given by Shaped by Rain Studios. Link to Youtube video: https://www.youtube.com/watch?v=rcBHIOjZDpk
 public class FModEvents : MonoBehaviour
 {
-    [field: Header("Cooking SFX")]
-    [SerializeField] public EventReference cookingSFX { get; private set; }
+    #region SOUND_EVENT_REFERENCE
+    [field: Header("Cooking Sizzle SFX")]
+    [field: SerializeField] public EventReference cookingSizzleSFX { get; private set; }
+
+    [field: Header("Cooking Done SFX")]
+    [field: SerializeField] public EventReference coookedSFX { get; private set; }
+
+    [field: Header("Order In SFX")]
+    [field: SerializeField] public EventReference orderSFX { get; private set; }
 
     [field: Header("Pickup SFX")]
-    [SerializeField] public EventReference pickupItem { get; private set; }
+    [field: SerializeField] public EventReference pickupItem { get; private set; }
 
     [field: Header("Drop SFX")]
-    [SerializeField] public EventReference drop { get; private set; }
+    [field: SerializeField] public EventReference drop { get; private set; }
 
-    [field: Header("Walking Footstep SFX")]
-    [SerializeField] public EventReference walkingFootsteps { get; private set; }
-
-    [field: Header("Ambience SFX")]
-    [SerializeField] public EventReference ambience { get; private set; }
+    [field: Header("Footstep SFX")]
+    [field: SerializeField] public EventReference footsteps { get; private set; }
 
     [field: Header("Music")]
-    [SerializeField] public EventReference music { get; private set; }
+    [field: SerializeField] public EventReference music { get; private set; }
 
-    public static FModEvents instance { get; private set; }
+    [field: Header("UI SFX")]
+    [field: SerializeField] public EventReference UI_SFX { get; private set; }
+    #endregion
+
+    public static FModEvents Instance { get; private set; }
 
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
-            Debug.LogError("More than one FMod Events instance in the Scene");
+            Debug.LogError("More than one FMod Events Instance in the Scene");
         }
 
-        instance = this;
+        Instance = this;
     }
 
 }

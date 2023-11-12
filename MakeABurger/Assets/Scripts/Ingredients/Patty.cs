@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class Patty : MonoBehaviour, ICookable
 {
@@ -8,27 +9,31 @@ public class Patty : MonoBehaviour, ICookable
 
     [SerializeField] Material cookedMaterial;
 
+    [SerializeField] Transform griddleTransform;
+
+    MeshRenderer meshRenderer;
+    EventInstance sizzleEventInstance;
+
     bool isCooking;
+    bool isCooked;
 
     // Start is called before the first frame update
     void Start()
     {
-        isCooking = false;
-    }
+        meshRenderer = GetComponent<MeshRenderer>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        isCooking = false;
     }
 
     public IEnumerator StartCooking()
     {
         yield return new WaitForSeconds(cookingTime);
 
-        GetComponent<MeshRenderer>().material = cookedMaterial;
+        meshRenderer.material = cookedMaterial;
 
-        isCooking = true;
+        isCooked = true;
+
+        StopCookingAudio();
     }
 
     public void StopCooking()
@@ -37,14 +42,21 @@ public class Patty : MonoBehaviour, ICookable
         {
             StopCoroutine("StartCooking");
             isCooking = false;
+
+            StopCookingAudio();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Griddle")
+        if (other.name == "Griddle" && isCooked == false)
         {
+            griddleTransform = other.gameObject.transform;
+
             StartCoroutine("StartCooking");
+            isCooking = true;
+
+            PlayCookingAudio();
         }
     }
 
@@ -54,5 +66,22 @@ public class Patty : MonoBehaviour, ICookable
         {
             StopCooking();
         }
+    }
+
+    void PlayCookingAudio()
+    {
+        if (isCooked == false)
+        {
+            sizzleEventInstance = AudioManager.Instance.CreateEventInstance(FModEvents.Instance.cookingSizzleSFX, griddleTransform);
+
+            sizzleEventInstance.start();
+        }
+    }
+
+    void StopCookingAudio()
+    {
+        sizzleEventInstance.stop(STOP_MODE.ALLOWFADEOUT);
+
+        AudioManager.Instance.PlayOneShot(FModEvents.Instance.coookedSFX, griddleTransform.position);
     }
 }

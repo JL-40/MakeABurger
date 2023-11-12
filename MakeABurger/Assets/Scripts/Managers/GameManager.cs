@@ -7,7 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] GameObject mainMenu;
+    public GameObject settingMenu;
+    public GameObject mainMenu;
+
+    public GameObject menuUI;
 
     public bool IsGamePaused { get; private set; }
 
@@ -32,14 +35,26 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (InputManager.Instance.IsPaused() == true)
+        {
+            PauseGame();
+        }
+
+        if (InputManager.Instance.IsResumed() == true)
+        {
+            PlayGame();
+        }
     }
 
-    void PlayGame()
+    public void PlayGame()
     {
         IsGamePaused = false;
 
-        mainMenu.SetActive(false);
+        AudioManager.Instance.ResumeAllAudio();
+
+        mainMenu.SetActive(true);
+        settingMenu.SetActive(false);
+        menuUI.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -47,13 +62,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         IsGamePaused = true;
+
+        AudioManager.Instance.PauseAllAudio();
+
+        menuUI.SetActive(true);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         Time.timeScale = 0f;
+
+        
     }
 }

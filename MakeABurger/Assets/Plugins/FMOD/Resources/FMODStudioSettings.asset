@@ -621,7 +621,7 @@ MonoBehaviour:
   sourceProjectPath: Assets/FMod/MakeABurger_FMod_Project/MakeABurger_FMod_Project.fspro
   sourceBankPath: Assets/FMod/MakeABurger_FMod_Project/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -640,8 +640,12 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Ambient
+  - Music
+  - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
