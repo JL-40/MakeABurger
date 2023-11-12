@@ -362,7 +362,11 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/New Input System/PlayerInputActions.cs"
 "Assets/Scripts/Cinemachine/CinemachinePOVExtension.cs"
+"Assets/Scripts/Ingredients/ICookable.cs"
+"Assets/Scripts/Ingredients/Patty.cs"
+"Assets/Scripts/Ingredients/Stacking.cs"
 "Assets/Scripts/InputManager.cs"
+"Assets/Scripts/Kitchen/Griddle.cs"
 "Assets/Scripts/Player/PlayerLocomotion.cs"
 -langversion:9.0
 
