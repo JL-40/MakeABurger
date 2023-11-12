@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
-{ 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{
+    public static ButtonManager Instance;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] Sprite resumeButtonSprite;
+    [SerializeField] Button playButton;
+
+    private void Awake()
     {
-        
+        #region SINGLETON
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+        #endregion
     }
 
     public void PlayGame()
@@ -40,5 +49,10 @@ public class ButtonManager : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void ChangePlayToResume()
+    {
+        playButton.GetComponent<Image>().sprite = resumeButtonSprite;
     }
 }

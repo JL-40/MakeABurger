@@ -373,10 +373,15 @@
 "Assets/Scripts/Managers/Audio/AudioManager.cs"
 "Assets/Scripts/Managers/Audio/FModEvents.cs"
 "Assets/Scripts/Managers/Audio/SliderInput.cs"
-"Assets/Scripts/Managers/GameManager.cs"
-"Assets/Scripts/Managers/InputManager.cs"
+"Assets/Scripts/Managers/Game/GameManager.cs"
+"Assets/Scripts/Managers/Game/InputManager.cs"
+"Assets/Scripts/Managers/Ingredients/IngredientSpawnerManager.cs"
+"Assets/Scripts/Managers/Monsters/MonsterMovement.cs"
+"Assets/Scripts/Managers/Monsters/MonsterSpawnManager.cs"
+"Assets/Scripts/Managers/Monsters/OrderManager.cs"
 "Assets/Scripts/Managers/UI/ButtonManager.cs"
 "Assets/Scripts/Managers/UI/MenuSwitcher.cs"
+"Assets/Scripts/Monster/MoodChanger.cs"
 "Assets/Scripts/Player/PlayerLocomotion.cs"
 -langversion:9.0
 
