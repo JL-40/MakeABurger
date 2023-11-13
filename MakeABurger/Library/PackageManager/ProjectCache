@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638346575919465849
-    m_Hash: 869258024
+      ticks: 638355161031960454
+    m_Hash: 2378127911
   m_LockFileStatus:
     m_FilePath: C:/Users/BlackIce/Documents/GitHub/MakeABurger/MakeABurger/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638346575919535861
-    m_Hash: 3283947213
+      ticks: 638355161031960454
+    m_Hash: 3115790942
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -491,9 +491,11 @@ m_ResolvedPackages:
     - 1.6.3
     - 1.7.0
     - 1.8.0-pre.1
+    - 1.8.0-pre.2
     compatible:
     - 1.7.0
     - 1.8.0-pre.1
+    - 1.8.0-pre.2
     recommended: 1.7.0
     deprecated: []
   dependencies:
@@ -3421,6 +3423,7 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.0
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -3436,6 +3439,7 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.0
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
