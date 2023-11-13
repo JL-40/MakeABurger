@@ -1062,7 +1062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &180461466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6882,6 +6882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9808c1d7d9349b24d9e21bb1329eadbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStackable: 0
 --- !u!114 &1240395529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8642,6 +8643,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1730658183}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1540391316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8792,6 +8805,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1730658183}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1730658183}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10462,6 +10487,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1730658183}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1742801864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11947,7 +11984,7 @@ GameObject:
   - component: {fileID: 1899001277}
   m_Layer: 0
   m_Name: OrderAtTrigger
-  m_TagString: Untagged
+  m_TagString: OrderHere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12032,7 +12069,7 @@ Transform:
   m_GameObject: {fileID: 1899001276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.252, y: 0.521, z: 3.313}
+  m_LocalPosition: {x: -0.252, y: 1.284, z: 3.313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12483,6 +12520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9808c1d7d9349b24d9e21bb1329eadbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStackable: 0
 --- !u!1 &1970111295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 509783805425646688, guid: b92b17d1781d14b4f8307132df2ad3aa, type: 3}
@@ -13582,6 +13620,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1730658183}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: SwitchToMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1730658183}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

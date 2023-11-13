@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject backgroundCover;
     #endregion
 
+    GameObject player;
+
     public bool IsGamePaused { get; private set; }
 
     public bool gameStarted { get; private set; }
@@ -29,7 +31,12 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        #endregion    
+        #endregion   
+        
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 
     // Start is called before the first frame update
@@ -102,6 +109,7 @@ public class GameManager : MonoBehaviour
     }
 
     #region Getter/Setter
-
+    public GameObject PlayerObject { get { return player; } }
+    public Transform PlayerTransform { get { return player.transform; } }
     #endregion
 }

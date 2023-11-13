@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 674024846687627869}
   - component: {fileID: 3132571837625103594}
   - component: {fileID: 7133270403190960419}
+  - component: {fileID: -6886618225810296491}
   - component: {fileID: 4004122520697117707}
-  - component: {fileID: 5951833110576202743}
+  - component: {fileID: 2453827049555295460}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -108,6 +109,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9699998, y: 11.004376, z: 0.2}
   m_Center: {x: 0, y: 0.27, z: 0}
+--- !u!54 &-6886618225810296491
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841596514222101708}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &4004122520697117707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +152,8 @@ MonoBehaviour:
   normalSprite: {fileID: -2143772895, guid: bd07af2e58552cf4383a3a833d81589d, type: 3}
   happySprite: {fileID: -73982137, guid: bd07af2e58552cf4383a3a833d81589d, type: 3}
   madSprite: {fileID: 51931572, guid: bd07af2e58552cf4383a3a833d81589d, type: 3}
-  monster_type: 0
---- !u!114 &5951833110576202743
+  monsterController: {fileID: 0}
+--- !u!114 &2453827049555295460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,6 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6841596514222101708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1f7c626f5a7b9409ad65693c3906b8, type: 3}
+  m_Script: {fileID: 11500000, guid: a4a4646237939ad4190483bab5faa756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster_type: 0
+  orderHereTransform: {fileID: 0}

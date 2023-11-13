@@ -43,7 +43,7 @@ public class OrderManager : MonoBehaviour
     {
         if (possibleOrderList.Count > 0)
         {
-
+            Debug.Log("Ordering");
         }
 
         PlayerOrderSound(monsterType);

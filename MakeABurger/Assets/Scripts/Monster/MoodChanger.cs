@@ -3,14 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
-public enum MONSTER_TYPE 
-{
-    LIZARD,
-    PINK_BLOB,
-    PURPLE_BLOB,
-    SQUID
-}
-
+[RequireComponent(typeof(MonsterController))]
 public class MoodChanger : MonoBehaviour
 {
     [SerializeField] SpriteRenderer monsterImage;
@@ -19,7 +12,7 @@ public class MoodChanger : MonoBehaviour
     [SerializeField] Sprite happySprite;
     [SerializeField] Sprite madSprite;
 
-    [SerializeField] MONSTER_TYPE monster_type;
+    [SerializeField] MonsterController monsterController;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +23,11 @@ public class MoodChanger : MonoBehaviour
         }
 
         monsterImage.sprite = normalSprite;
+
+        if (monsterController == null)
+        {
+            monsterController = GetComponent<MonsterController>();
+        }
     }
 
     public void Satisfy(bool isHappy)
@@ -50,7 +48,7 @@ public class MoodChanger : MonoBehaviour
     {
         EventReference monsterSound;
 
-        switch (monster_type) 
+        switch (monsterController.MonsterType) 
         {
             case MONSTER_TYPE.LIZARD:
                 {
@@ -89,7 +87,7 @@ public class MoodChanger : MonoBehaviour
     {
         EventReference monsterSound;
 
-        switch (monster_type)
+        switch (monsterController.MonsterType)
         {
             case MONSTER_TYPE.LIZARD:
                 {

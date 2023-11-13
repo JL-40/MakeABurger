@@ -55,4 +55,9 @@ public class ButtonManager : MonoBehaviour
     {
         playButton.GetComponent<Image>().sprite = resumeButtonSprite;
     }
+
+    public void PlayButtonPressSound()
+    {
+        AudioManager.Instance.PlayOneShot(FModEvents.Instance.UI_SFX, GameManager.Instance.PlayerTransform.position);
+    }
 }

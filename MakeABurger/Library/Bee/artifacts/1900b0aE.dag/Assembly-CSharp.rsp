@@ -377,7 +377,6 @@
 "Assets/Scripts/Managers/Game/GameManager.cs"
 "Assets/Scripts/Managers/Game/InputManager.cs"
 "Assets/Scripts/Managers/Ingredients/IngredientSpawnerManager.cs"
-"Assets/Scripts/Managers/Monsters/MonsterMovement.cs"
 "Assets/Scripts/Managers/Monsters/MonsterSpawnManager.cs"
 "Assets/Scripts/Managers/Monsters/OrderManager.cs"
 "Assets/Scripts/Managers/UI/ButtonManager.cs"
