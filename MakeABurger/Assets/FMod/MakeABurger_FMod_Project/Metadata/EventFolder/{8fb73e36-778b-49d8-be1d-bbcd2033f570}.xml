@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{8fb73e36-778b-49d8-be1d-bbcd2033f570}">
+		<property name="name">
+			<value>PurpleBlob</value>
+		</property>
+		<relationship name="folder">
+			<destination>{770e629a-9f53-4cc0-85fa-39eca9724557}</destination>
+		</relationship>
+	</object>
+</objects>

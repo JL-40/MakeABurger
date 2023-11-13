@@ -13,8 +13,60 @@ public class FModEvents : MonoBehaviour
     [field: Header("Cooking Done SFX")]
     [field: SerializeField] public EventReference coookedSFX { get; private set; }
 
+    #region Order SFX
     [field: Header("Order In SFX")]
-    [field: SerializeField] public EventReference orderSFX { get; private set; }
+    [field: SerializeField] public EventReference orderInSFX { get; private set; }
+
+    [field: Header("Order Done SFX")]
+    [field: SerializeField] public EventReference orderDoneSFX { get; private set; }
+    #endregion
+
+    #region Voice
+    #region Lizard Voice
+    [field: Header("Lizard Order SFX")]
+    [field: SerializeField] public EventReference lizardOrder { get; private set; }
+
+    [field: Header("Lizard Happy SFX")]
+    [field: SerializeField] public EventReference lizardHappy { get; private set; }
+
+    [field: Header("Lizard Sad SFX")]
+    [field: SerializeField] public EventReference lizardSad { get; private set; }
+    #endregion
+
+    #region PinkBlob Voice
+    [field: Header("Pink Blob Order SFX")]
+    [field: SerializeField] public EventReference pinkBlobOrder { get; private set; }
+
+    [field: Header("Pink Blob Happy SFX")]
+    [field: SerializeField] public EventReference pinkBlobHappy { get; private set; }
+
+    [field: Header("Pink Blob Sad SFX")]
+    [field: SerializeField] public EventReference pinkBlobSad { get; private set; }
+    #endregion
+
+    #region PurpleBlob Voice
+    [field: Header("Purple Blob Order SFX")]
+    [field: SerializeField] public EventReference purpleBlobOrder { get; private set; }
+
+    [field: Header("Purple Blob Happy SFX")]
+    [field: SerializeField] public EventReference purpleBlobHappy { get; private set; }
+
+    [field: Header("Purple Blob Sad SFX")]
+    [field: SerializeField] public EventReference purpleBlobSad { get; private set; }
+    #endregion
+
+    #region Squid Voice
+    [field: Header("Squid Order SFX")]
+    [field: SerializeField] public EventReference squidOrder { get; private set; }
+
+    [field: Header("Squid Happy SFX")]
+    [field: SerializeField] public EventReference squidHappy { get; private set; }
+
+    [field: Header("Squid Sad SFX")]
+    [field: SerializeField] public EventReference squidSad { get; private set; }
+    #endregion
+
+    #endregion
 
     [field: Header("Pickup SFX")]
     [field: SerializeField] public EventReference pickupItem { get; private set; }

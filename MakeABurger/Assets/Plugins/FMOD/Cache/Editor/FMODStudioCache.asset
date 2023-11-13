@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMod/MakeABurger_FMod_Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638353571927336030
+  lastModified: 638354241255999787
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -67,6 +67,87 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1321056
   Exists: 1
+--- !u!114 &-4968094170742374815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Lizard/LizardHappy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Lizard/LizardHappy
+  Guid:
+    Data1: 2005892179
+    Data2: 1245523393
+    Data3: -741868628
+    Data4: -727899813
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3242042908934230673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PurpleBlob/PurpleBlobHappy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PurpleBlob/PurpleBlobHappy
+  Guid:
+    Data1: -789661984
+    Data2: 1290185908
+    Data3: 1238875787
+    Data4: -1317416514
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3101781824378512054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PurpleBlob/PurpleBlobSad
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PurpleBlob/PurpleBlobSad
+  Guid:
+    Data1: 1021438977
+    Data2: 1332258942
+    Data3: 1926447548
+    Data4: 1510127271
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2793487060025382185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,11 +163,38 @@ MonoBehaviour:
   Path: Assets/FMod/MakeABurger_FMod_Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638353566271400216
+  lastModified: 638354241256679937
   FileSizes:
   - Name: Desktop
-    Value: 125216
+    Value: 427424
   Exists: 1
+--- !u!114 &-2650268644062220680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Squid/SquidHappy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Squid/SquidHappy
+  Guid:
+    Data1: 1869828200
+    Data2: 1082407814
+    Data3: 615973534
+    Data4: 1041270329
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1423907972872976471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,10 +210,10 @@ MonoBehaviour:
   Path: Assets/FMod/MakeABurger_FMod_Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638353571927376037
+  lastModified: 638354241256039792
   FileSizes:
   - Name: Desktop
-    Value: 1302
+    Value: 1908
   Exists: 1
 --- !u!114 &-868806284609652348
 MonoBehaviour:
@@ -134,6 +242,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5694
+--- !u!114 &-541471820639896230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PurpleBlob/PurpleBlobOrder
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PurpleBlob/PurpleBlobOrder
+  Guid:
+    Data1: -1693378784
+    Data2: 1105190220
+    Data3: -1224598632
+    Data4: 1229051130
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,12 +296,25 @@ MonoBehaviour:
   - {fileID: -5763185173092682819}
   - {fileID: 531373585210495248}
   - {fileID: 3580330782289934765}
+  - {fileID: -3101781824378512054}
+  - {fileID: -541471820639896230}
+  - {fileID: 3204829380522515256}
+  - {fileID: -4968094170742374815}
+  - {fileID: 3434311525970415107}
+  - {fileID: 5286086123725368372}
+  - {fileID: -2650268644062220680}
+  - {fileID: 2964172148119875290}
+  - {fileID: 8414161160431907575}
+  - {fileID: 714542202961723614}
+  - {fileID: 1405597563238381376}
+  - {fileID: 7194683964176099031}
+  - {fileID: -3242042908934230673}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5782957331859704058}
   StringsBanks:
   - {fileID: -1423907972872976471}
-  cacheTime: 638353571927376037
+  cacheTime: 638354241256679937
   cacheVersion: 131609
 --- !u!114 &531373585210495248
 MonoBehaviour:
@@ -186,6 +334,33 @@ MonoBehaviour:
     Data2: 1175499638
     Data3: -835362676
     Data4: 1606036000
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &714542202961723614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/OrderReady
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/OrderReady
+  Guid:
+    Data1: -812942688
+    Data2: 1325118894
+    Data3: 670107017
+    Data4: -1338167613
   Banks:
   - {fileID: -2793487060025382185}
   IsStream: 0
@@ -222,6 +397,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1405597563238381376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PinkBlob/PinkBlobSad
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PinkBlob/PinkBlobSad
+  Guid:
+    Data1: 1396224181
+    Data2: 1125215163
+    Data3: 1321248136
+    Data4: -867701515
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2467231917418328713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +442,60 @@ MonoBehaviour:
     Data2: 1266821304
     Data3: -589009995
     Data4: -1407666960
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2964172148119875290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Squid/SquidOrder
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Squid/SquidOrder
+  Guid:
+    Data1: 1209126765
+    Data2: 1075874570
+    Data3: 1230297483
+    Data4: -1081427223
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3204829380522515256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PinkBlob/PinkBlobOrder
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PinkBlob/PinkBlobOrder
+  Guid:
+    Data1: 62828094
+    Data2: 1264799982
+    Data3: -170081653
+    Data4: 63441321
   Banks:
   - {fileID: -2793487060025382185}
   IsStream: 0
@@ -269,6 +525,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 494
   Exists: 1
+--- !u!114 &3434311525970415107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Lizard/LizardOrder
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Lizard/LizardOrder
+  Guid:
+    Data1: 1599206754
+    Data2: 1171364767
+    Data3: 1891376776
+    Data4: 1413688138
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3580330782289934765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +606,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130638
+--- !u!114 &5286086123725368372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Squid/SquidSad
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Squid/SquidSad
+  Guid:
+    Data1: -1038787485
+    Data2: 1198781401
+    Data3: 515877788
+    Data4: -1144267448
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7194683964176099031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/PinkBlob/PinkBlobHappy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/PinkBlob/PinkBlobHappy
+  Guid:
+    Data1: -1802237248
+    Data2: 1224213143
+    Data3: -1050977637
+    Data4: -975683315
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7336487997075079493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +678,33 @@ MonoBehaviour:
     Data2: 1121672997
     Data3: -52741218
     Data4: 645439464
+  Banks:
+  - {fileID: -2793487060025382185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8414161160431907575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Lizard/LizardSad
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Lizard/LizardSad
+  Guid:
+    Data1: 969561488
+    Data2: 1095261069
+    Data3: -1589463111
+    Data4: -1815299042
   Banks:
   - {fileID: -2793487060025382185}
   IsStream: 0

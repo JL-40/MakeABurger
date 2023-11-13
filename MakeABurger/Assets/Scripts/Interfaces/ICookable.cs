@@ -6,5 +6,5 @@ public interface ICookable
 {
     public IEnumerator StartCooking();
 
-    public void StopCooking();
+    public void StopCooking(bool isInterrupted = false);
 }

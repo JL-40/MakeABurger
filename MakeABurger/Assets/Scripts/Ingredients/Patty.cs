@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
 
+[RequireComponent(typeof (Stacking))]
 public class Patty : MonoBehaviour, ICookable
 {
     [SerializeField] float cookingTime;
@@ -33,17 +34,20 @@ public class Patty : MonoBehaviour, ICookable
 
         isCooked = true;
 
+        GetComponent<Stacking>().IsStackable = isCooked;
+
         StopCookingAudio();
     }
 
-    public void StopCooking()
+    public void StopCooking(bool isInterrupted = false)
     {
         if (isCooking == true)
         {
             StopCoroutine("StartCooking");
             isCooking = false;
 
-            StopCookingAudio();
+            StopCookingAudio(isInterrupted);
+
         }
     }
 
@@ -64,7 +68,7 @@ public class Patty : MonoBehaviour, ICookable
     {
         if (other.name == "Griddle")
         {
-            StopCooking();
+            StopCooking(true);
         }
     }
 
@@ -78,10 +82,13 @@ public class Patty : MonoBehaviour, ICookable
         }
     }
 
-    void StopCookingAudio()
+    void StopCookingAudio(bool isInterrupted = false)
     {
         sizzleEventInstance.stop(STOP_MODE.ALLOWFADEOUT);
 
-        AudioManager.Instance.PlayOneShot(FModEvents.Instance.coookedSFX, griddleTransform.position);
+        if (isInterrupted == false)
+        {
+            AudioManager.Instance.PlayOneShot(FModEvents.Instance.coookedSFX, griddleTransform.position);
+        }
     }
 }

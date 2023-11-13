@@ -370,6 +370,7 @@
 "Assets/Scripts/Ingredients/Patty.cs"
 "Assets/Scripts/Ingredients/Stacking.cs"
 "Assets/Scripts/Interfaces/ICookable.cs"
+"Assets/Scripts/ItemInteraction.cs"
 "Assets/Scripts/Managers/Audio/AudioManager.cs"
 "Assets/Scripts/Managers/Audio/FModEvents.cs"
 "Assets/Scripts/Managers/Audio/SliderInput.cs"
@@ -381,7 +382,9 @@
 "Assets/Scripts/Managers/Monsters/OrderManager.cs"
 "Assets/Scripts/Managers/UI/ButtonManager.cs"
 "Assets/Scripts/Managers/UI/MenuSwitcher.cs"
+"Assets/Scripts/Monster/MonsterController.cs"
 "Assets/Scripts/Monster/MoodChanger.cs"
+"Assets/Scripts/PhysicsPickup.cs"
 "Assets/Scripts/Player/PlayerLocomotion.cs"
 -langversion:9.0
 

@@ -66,4 +66,9 @@ public class InputManager : MonoBehaviour
     {
         return playerInputActions.UI.Resume.triggered;
     }
+
+    public bool IsFiring()
+    {
+        return playerInputActions.Player.Fire.triggered;
+    }
 }

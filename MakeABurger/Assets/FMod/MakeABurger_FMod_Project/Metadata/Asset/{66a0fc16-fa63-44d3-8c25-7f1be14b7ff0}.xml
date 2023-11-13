@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{66a0fc16-fa63-44d3-8c25-7f1be14b7ff0}">
+		<property name="assetPath">
+			<value>Monsters/Pink Blob/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8abe77ab-d49a-437d-9a89-2b6619a35a5b}</destination>
+		</relationship>
+	</object>
+</objects>

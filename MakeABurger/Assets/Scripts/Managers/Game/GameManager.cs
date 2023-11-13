@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    #region UI
     public GameObject settingMenu;
     public GameObject mainMenu;
-
     public GameObject menuUI;
+    [SerializeField] GameObject backgroundCover;
+    #endregion
 
     public bool IsGamePaused { get; private set; }
 
@@ -23,8 +25,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        Instance = this;
+        else
+        {
+            Instance = this;
+        }
         #endregion    
     }
 
@@ -33,9 +37,10 @@ public class GameManager : MonoBehaviour
     {
         PauseGame();
 
-        if (gameStarted != false)
+        if (gameStarted == true)
         {
             gameStarted = false;
+            backgroundCover.SetActive(true);
         }
     }
 
@@ -50,6 +55,11 @@ public class GameManager : MonoBehaviour
         if (InputManager.Instance.IsResumed() == true && gameStarted == true)
         {
             PlayGame();
+        }
+
+        if (gameStarted == true)
+        {
+            MonsterSpawnManager.Instance.SpawnMonster();
         }
     }
 
@@ -71,6 +81,7 @@ public class GameManager : MonoBehaviour
         if (gameStarted == false)
         {
             ButtonManager.Instance.ChangePlayToResume();
+            backgroundCover.SetActive(false);
 
             gameStarted = true;
         }
