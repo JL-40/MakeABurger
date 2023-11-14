@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4071983204946979686}
   - component: {fileID: 3602285199645817859}
   - component: {fileID: 332903068921650685}
-  - component: {fileID: 1265274885274822619}
+  - component: {fileID: -1485651562246146006}
   - component: {fileID: 91310480666171909}
   m_Layer: 3
   m_Name: Patty
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 5704808878853221309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.942, y: 1.277, z: 0.612}
-  m_LocalScale: {x: 0.16, y: -0.02, z: 0.15}
+  m_LocalPosition: {x: -1.3676401, y: 0.9855865, z: 0.48953712}
+  m_LocalScale: {x: 0.16, y: 0.02, z: 0.16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1265274885274822619
+--- !u!114 &-1485651562246146006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,12 +145,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5704808878853221309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c46ef63f089d4143947b8994da95916, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bd5043c222c11245ae2649c7dc21ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cookingTime: 5
   cookedMaterial: {fileID: 2100000, guid: 69f29f629a07f1f4e99a42b4b3870635, type: 2}
   griddleTransform: {fileID: 0}
+  isCooking: 0
+  isCooked: 0
 --- !u!114 &91310480666171909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9808c1d7d9349b24d9e21bb1329eadbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStackable: 0
+  isCookable: 1
   connectedBodies: []

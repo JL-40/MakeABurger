@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
 
+[RequireComponent(typeof(Stacking))]
 public class Cookable : MonoBehaviour
 {
     [SerializeField] float cookingTime;
@@ -70,4 +71,24 @@ public class Cookable : MonoBehaviour
     }
 
     public bool IsCooked { get { return isCooked; } }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Cooking") && isCooked == false)
+        {
+            griddleTransform = other.gameObject.transform;
+
+            StartCoroutine("StartCooking");
+            isCooking = true;
+            PlayCookingAudio();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Cooking"))
+        {
+            StopCooking(true);
+        }
+    }
 }

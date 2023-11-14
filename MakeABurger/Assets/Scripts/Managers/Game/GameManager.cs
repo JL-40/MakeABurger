@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     GameObject player;
-
+ 
     public bool IsGamePaused { get; private set; }
 
     public bool gameStarted { get; private set; }

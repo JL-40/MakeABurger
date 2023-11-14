@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Stacking : MonoBehaviour
 {
+    public bool isCookable;
+
     [SerializeField] List<Rigidbody> connectedBodies = new List<Rigidbody>();
 
     FixedJoint fixedJoint;
@@ -16,19 +18,38 @@ public class Stacking : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (GetComponent<Cookable>().IsCooked == false)
-        {
-            return;
-        }
-
         Collider collider = collision.collider;
-        if (collider.CompareTag("Ingredient"))
+        if (isCookable == true)
         {
-            if (collider.GetComponent<Cookable>().IsCooked == false)
+            if (GetComponent<Cookable>().IsCooked == false)
             {
                 return;
             }
 
+            if (collider.CompareTag("Ingredient"))
+            {
+                if (collider.GetComponent<Stacking>().Coockable == true)
+                {
+                    if (collider.GetComponent<Cookable>().IsCooked == false)
+                    {
+                        return;
+                    }
+                }
+
+                Rigidbody otherBody = collision.rigidbody;
+
+                if (connectedBodies.Contains(otherBody) == false)
+                {
+                    fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.rigidbody;
+
+                    connectedBodies.Add(otherBody);
+                }
+
+            }
+        }
+        else
+        {
             Rigidbody otherBody = collision.rigidbody;
 
             if (connectedBodies.Contains(otherBody) == false)
@@ -38,7 +59,12 @@ public class Stacking : MonoBehaviour
 
                 connectedBodies.Add(otherBody);
             }
-
         }
     }
+
+    #region Getter
+    public bool Coockable { get { return isCookable; } }
+
+    public List<Rigidbody> Stack { get { return connectedBodies; } }
+    #endregion
 }

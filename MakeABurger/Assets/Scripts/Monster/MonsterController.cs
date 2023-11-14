@@ -14,7 +14,7 @@ public class MonsterController : MonoBehaviour
     [SerializeField] MONSTER_TYPE monster_type;
 
     [SerializeField] Transform orderHereTransform;
-    bool hasOrdered = false;
+    [SerializeField] bool hasOrdered = false;
 
 
     // Start is called before the first frame update
