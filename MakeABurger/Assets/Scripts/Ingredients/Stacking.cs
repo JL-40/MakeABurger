@@ -4,30 +4,41 @@ using UnityEngine;
 
 public class Stacking : MonoBehaviour
 {
-    [SerializeField] bool isStackable;
+    [SerializeField] List<Rigidbody> connectedBodies = new List<Rigidbody>();
+
+    FixedJoint fixedJoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        connectedBodies.Clear();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Ingredient") && collision.collider.GetComponent<Stacking>().IsStackable == true)
+        if (GetComponent<Cookable>().IsCooked == false)
         {
-            if (isStackable == true)
+            return;
+        }
+
+        Collider collider = collision.collider;
+        if (collider.CompareTag("Ingredient"))
+        {
+            if (collider.GetComponent<Cookable>().IsCooked == false)
             {
-                gameObject.transform.parent = collision.collider.transform;
+                return;
             }
+
+            Rigidbody otherBody = collision.rigidbody;
+
+            if (connectedBodies.Contains(otherBody) == false)
+            {
+                fixedJoint = gameObject.AddComponent<FixedJoint>();
+                fixedJoint.connectedBody = collision.rigidbody;
+
+                connectedBodies.Add(otherBody);
+            }
+
         }
     }
-
-    public bool IsStackable { get { return this; } set { isStackable = value; } }
 }

@@ -17,6 +17,7 @@ public class CinemachinePOVExtension : CinemachineExtension
     Vector3 startingRotation;
 
     [SerializeField] Transform pickupTarget;
+    [SerializeField] float pickupTargetDistance = 1.5f;
     Camera mainCamera;
 
     protected override void Awake()
@@ -59,8 +60,6 @@ public class CinemachinePOVExtension : CinemachineExtension
     // Asked ChatGPT. Prompt: "i'm using Cinemachine to have a POV camera using a custom CinemachineExtension to overrider PostPipelineStageCallback to change the RawOrientation of the virtual camera. How do I position a game object to be in the center of the camera view at all times"
     void CenterPickupTarget()
     {
-        Vector3 screenPos = mainCamera.WorldToScreenPoint(pickupTarget.position);
-
-        pickupTarget.position = mainCamera.ScreenToWorldPoint(new Vector3(mainCamera.pixelWidth / 2f, mainCamera.pixelHeight / 2f, screenPos.z));
+        pickupTarget.position = mainCamera.ScreenToWorldPoint(new Vector3(mainCamera.pixelWidth / 2f, mainCamera.pixelHeight / 2f, pickupTargetDistance));
     }
 }
